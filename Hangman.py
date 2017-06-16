@@ -99,10 +99,10 @@ print print_hangman(wrong_list)
 
 for b in word:
     number_of_letters.append("_")
-print ' '.join(number_of_letters)s
+print ' '.join(number_of_letters)
 
 while set(number_of_letters) != set(word_list) and len(wrong_list) <= 5:
-    guess = raw_input("Please enter a letter: ")
+    guess = raw_input("Please enter a letter: ").lower()
     print guess
     if guess in word_list:
         print print_hangman(wrong_list)
